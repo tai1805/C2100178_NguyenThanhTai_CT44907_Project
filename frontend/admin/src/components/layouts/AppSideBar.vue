@@ -1,12 +1,12 @@
 <template>
     <div class="vertical-nav bg-white" id="sidebar" style="overflow-y: auto" v-if="isAuth">
         <div class="dropdown">
-            <button class="btn  float-end mt-1 me-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <button class="btn  float-end mt-1 me-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fas fa-cog"></i>
-            </button>
-            <ul class="dropdown-menu">
+            </button> -->
+            <!-- <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
-            </ul>
+            </ul> -->
         </div>
         <div class="py-4 px-3 mb-4 bg-title">
             <div class="d-flex align-items-center">
@@ -18,14 +18,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-1 mb-0">Dashboard</p>
-        <ul class="nav flex-column bg-white mb-0">
-            <li class="nav-item " :class="{ 'active': $route.path === '/' }">
-                <router-link to="/" class="nav-link">
-                    <i class="fas fa-chart-area me-3 "></i>Thống kê
-                </router-link>
-            </li>
-        </ul>
+        
         <p class="text-gray font-weight-bold text-uppercase px-3 small pb-1 mb-0"></p>
         <ul class="nav flex-column bg-white mb-0">
             <li class="nav-item " :class="{ 'active': $route.path.match(/^\/categories/) }">
@@ -56,6 +49,14 @@
                     Thông tin khách hàng
                 </router-link >
                 
+            </li>
+        </ul>
+        
+        <ul class="nav flex-column bg-white mb-0">
+            <li class="nav-item " :class="{ 'active': $route.path === '/' }">
+                <router-link to="/" class="nav-link">
+                    <i class="fas fa-chart-area me-3 "></i>Thống kê
+                </router-link>
             </li>
         </ul>
     </div>
